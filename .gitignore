@@ -1,0 +1,7 @@
+# Created by .ignore support plugin (hsz.mobi)
+# ignore all hiddens
+.*
+
+# but don't ignore the .gitignore
+!.gitignore
+
