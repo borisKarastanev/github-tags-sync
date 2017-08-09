@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
+### Terminate script on error
+set -e
 
-## Global vars
+### Global vars
 TMP_BASE_DIR="fusion-templates";
 
-## declare an array of template names
+### declare an array of template names
 declare -a templates=(
     "template-drawer-navigation"
     "template-tab-navigation"
@@ -19,29 +21,29 @@ declare -a templates=(
     "template-blank-ng"
 )
 
-## Check PWD
+### Check PWD
 function checkDir() {
     if [[ ${PWD} != *${TMP_BASE_DIR}* ]]; then
         echo "Please run the script from the ${TMP_BASE_DIR} directory";
-        exit -1;
+        exit 1;
     else
         echo ${PWD};
     fi
 }
 
-## Main function
+### Main function
 function run() {
-
+TMP_BASE=$(checkDir)
 for i in "${templates[@]}"
 do
-    TMP_DIR="$(checkDir)/$i";
+    cd "${TMP_BASE}/${i}";
     echo "Downloading the latest changes from the ${i} repository"
-    cd ${TMP_DIR}
     git checkout master && git pull
 done;
 
 }
 
+checkDir
 run
 exit 0;
 
