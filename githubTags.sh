@@ -5,6 +5,11 @@ set -e
 ### Global vars
 TMP_BASE_DIR="fusion-templates";
 
+GREEN='\033[0;32m'
+WHITE='\033[1;37m'
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+
 ### declare an array of template names
 declare -a templates=(
     "template-drawer-navigation"
@@ -24,7 +29,7 @@ declare -a templates=(
 ### Check PWD
 function checkDir() {
     if [[ ${PWD} != *${TMP_BASE_DIR}* ]]; then
-        echo "Please run the script from the ${TMP_BASE_DIR} directory";
+        echo -e "${RED}Please run the script from your ${WHITE}${TMP_BASE_DIR}${RED} directory ${NC}";
         exit 1;
     else
         echo ${PWD};
@@ -37,7 +42,7 @@ TMP_BASE=$(checkDir)
 for i in "${templates[@]}"
 do
     cd "${TMP_BASE}/${i}";
-    echo "Downloading the latest changes from the ${i} repository"
+    echo -e "${GREEN}Downloading the latest changes from the ${WHITE}${i}${GREEN} repository${NC}"
     git checkout master && git pull
 done;
 
