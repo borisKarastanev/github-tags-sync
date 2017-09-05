@@ -27,6 +27,10 @@ declare -a templates=(
     "template-tab-navigation-ng"
     "template-master-detail-ng"
     "template-blank-ng"
+    "template-master-detail-kinvey-ng"
+    "template-master-detail-kinvey-ts"
+    "template-master-detail-kinvey"
+
 )
 
 ### Check PWD
