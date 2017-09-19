@@ -1,36 +1,64 @@
-# github-tags-sync
-Automate github tags for listed Nativescript Sidekick Template repositories 
-
-
-## Manual Installation and Development
+# Manual Installation and Development
 
 Download the GIT repository in you favorite projects directory
 
 ```bash
-$ git clone git@github.com:borisKarastanev/github-tags-sync.git
+$ git clone git@github.com:borisKarastanev/utils.git
 
 ```
 
-Enter the github-tags-sync directory and copy the script to your fusion-templates directory
+# Content
+
+## deploy-templates
+Automate npm deployment with github tags for listed Nativescript Sidekick Templates 
+
+### Enter the utils/deploy directory and copy the script to your fusion-templates directory
 
  ```bash
- $ cp ./githubTags.sh PATH_TO_YOUR/fusion-templates/
+ $ cp ./deploy-templates.sh PATH_TO_YOUR/fusion-templates/
  
  ```
  
- ## Running the script 
+ ### Running the script 
  
  Make the file executable 
 
 
  ```bash
- $ chmod u+x ./githubTags.sh
+ $ chmod u+x ./deploy-templates.sh
  
  ```
  
- Run the script with a valid simver as an argument e.g [ 3.1.1 | major | minor | patch | ]
+ ### Run the script with a valid simver as an argument e.g [ 3.1.1 | major | minor | patch | ]
 
 ```bash
- $ ./githubTags.sh 3.1.4
+ $ ./deploy-templates.sh 3.1.4
+ 
+ ```
+
+## deploy-extension
+Automate npm deployment with github tags for the Nativescript Starter Kits Extension
+
+### Enter the utils/deploy directory and copy the script to your nativescript-starter-kits directory
+
+ ```bash
+ $ cp ./deploy-extension.sh PATH_TO_YOUR/nativescript-starter-kits/
+ 
+ ```
+ 
+ ### Running the script 
+ 
+ Make the file executable 
+
+
+ ```bash
+ $ chmod u+x ./deploy-extension.sh
+ 
+ ```
+ 
+ ### Run the script with a valid simver as an argument e.g [ 3.1.1 | major | minor | patch | ]
+
+```bash
+ $ ./deploy-extension.sh 3.1.4
  
  ```

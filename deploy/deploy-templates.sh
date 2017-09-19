@@ -2,7 +2,7 @@
 ### Terminate script on error
 set -e
 
-### Global vars
+### Global vars TODO Implement a method for more automated folder detection
 TMP_BASE_DIR="fusion-templates";
 
 GREEN='\033[0;32m'
