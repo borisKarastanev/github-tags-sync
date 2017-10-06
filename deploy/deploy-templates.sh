@@ -3,7 +3,7 @@
 set -e
 
 ### Global vars TODO Implement a method for more automated folder detection
-TMP_BASE_DIR="fusion-templates";
+TMP_BASE_DIR="$1";
 
 GREEN='\033[0;32m'
 WHITE='\033[1;37m'
@@ -11,7 +11,7 @@ RED='\033[0;31m'
 NC='\033[0m' # No Color
 
 ### A valid sem version e.g [ 3.1.1 | major | minor | patch | ]
-NPM_VERSION_UPDATE="$1"
+NPM_VERSION_UPDATE="$2"
 
 ### declare an array of template names
 declare -a templates=(
@@ -35,11 +35,11 @@ declare -a templates=(
 
 ### Check PWD
 function checkDir() {
-    if [[ ${PWD} != *${TMP_BASE_DIR}* ]]; then
-        echo -e "${RED}Please run the script from your ${WHITE}${TMP_BASE_DIR}${RED} directory ${NC}";
-        exit 1;
-    else
+    if [[ -d ${TMP_BASE_DIR} ]]; then
         echo ${PWD};
+    else
+        echo -e "${RED}First argument must be a valid Directory${RED}${NC}";
+        exit 1;
     fi
 }
 
