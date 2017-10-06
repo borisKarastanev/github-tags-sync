@@ -62,3 +62,28 @@ Automate npm deployment with github tags for the Nativescript Starter Kits Exten
  $ ./deploy-extension.sh 3.1.4
  
  ```
+ 
+## get-templates
+### Enter the utils/download directory and copy the script to your fusion-templates directory
+
+ ```bash
+ $ cp ./get-templates.sh PATH_TO_YOUR/fusion-templates/
+ 
+ ```
+ 
+ ### Running the script 
+ 
+ Make the file executable 
+
+
+ ```bash
+ $ chmod u+x ./get-templates.sh
+ 
+ ```
+ 
+ ### Run the script 
+
+```bash
+ $ ./get-templates.sh
+ 
+ ```
