@@ -29,10 +29,13 @@ Automate npm deployment with github tags for listed Nativescript Sidekick Templa
  
  ```
  
- ### Run the script with a valid simver as an argument e.g [ 3.1.1 | major | minor | patch | ]
+ ### Run the script with valid arguments
+  
+ #### 1: Valid Sidekick templates directory
+ #### 2: Valid simver as an argument e.g [ 3.1.1 | major | minor | patch | ]
 
 ```bash
- $ ./deploy-templates.sh 3.1.4
+ $ ./deploy-templates.sh ./your-templates-dir 3.1.4
  
  ```
 
