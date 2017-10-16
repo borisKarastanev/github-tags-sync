@@ -3,7 +3,7 @@
 Download the GIT repository in you favorite projects directory
 
 ```bash
-$ git clone git@github.com:borisKarastanev/utils.git
+$ git clone git@github.com:NativeScript/nativescript-starter-kits-utils.git
 
 ```
 
