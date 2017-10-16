@@ -12,7 +12,7 @@ $ git clone git@github.com:NativeScript/nativescript-starter-kits-utils.git
 ## deploy-templates
 Automate npm deployment with github tags for listed Nativescript Sidekick Templates 
 
-### Enter the utils/deploy directory and copy the script to your fusion-templates directory
+### Enter the scripts/deploy directory and copy the script to your fusion-templates directory
 
  ```bash
  $ cp ./deploy-templates.sh PATH_TO_YOUR/fusion-templates/
@@ -42,7 +42,7 @@ Automate npm deployment with github tags for listed Nativescript Sidekick Templa
 ## deploy-extension
 Automate npm deployment with github tags for the Nativescript Starter Kits Extension
 
-### Enter the utils/deploy directory and copy the script to your nativescript-starter-kits directory
+### Enter the scripts/deploy directory and copy the script to your nativescript-starter-kits directory
 
  ```bash
  $ cp ./deploy-extension.sh PATH_TO_YOUR/nativescript-starter-kits/
@@ -67,7 +67,7 @@ Automate npm deployment with github tags for the Nativescript Starter Kits Exten
  ```
  
 ## get-templates
-### Enter the utils/download directory and copy the script to your fusion-templates directory
+### Enter the scripts/download directory and copy the script to your fusion-templates directory
 
  ```bash
  $ cp ./get-templates.sh PATH_TO_YOUR/fusion-templates/
