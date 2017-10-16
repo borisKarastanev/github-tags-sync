@@ -1,6 +1,6 @@
 # Ng App Template Style Guide
 
-##What is a NativeScript app template?
+## What is a NativeScript app template?
 The NativeScript app template is a blueprint for a fully functional mobile application developed with NativeScript. Each app template resides in its own git repo (e.g. https://github.com/NativeScript/template-master-detail-ng) and is usually published as an npm package as well (e.g. https://www.npmjs.com/package/tns-template-master-detail-ng). You use the tns create CLI command to create mobile app from app template like this:
 ```
 tns create my-app-name --template tns-template-master-detail-ng 
@@ -398,11 +398,12 @@ Do use upper camel case for class names.
 Do match the name of the symbol to the name of the file.
 
 Do append the symbol name with the conventional suffix (such as Component, Module, Service) for a thing of that type.
-| Symbol Name | File Name |
-|-------------|-------------|
-| @Component({...}) export class CarDetailComponent { } | car-detail.component.ts |
-| @Component({...}) export class CarsModule { }         | cars.module.ts |
-| @Injectable() export class CarService { }             | car.service.ts |
+
+| Symbol Name  | File Name |
+| ------------- | ------------- |
+| @Component({...}) export class CarDetailComponent { }  | car-detail.component.ts  |
+| @Component({...}) export class CarsModule { }  | cars.module.ts  |
+| @Injectable() export class CarService { }  | car.service.ts  |
 
 ### Service Names
 Do use consistent names for all services named after their feature.
