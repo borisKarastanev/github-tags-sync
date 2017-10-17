@@ -42,7 +42,7 @@ Automate npm deployment with github tags for listed Nativescript Sidekick Templa
   ## deploy-page-templates
 Automate npm deployment with github tags for listed Nativescript Sidekick Page Templates 
 
-### Enter the utils/deploy directory and copy the script to your fusion-templates directory
+### Enter the scripts/deploy directory and copy the script to your fusion-templates directory
 
  ```bash
  $ cp ./deploy-page-templates.sh PATH_TO_YOUR_FOLDER/
