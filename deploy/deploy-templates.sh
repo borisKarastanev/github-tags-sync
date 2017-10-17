@@ -45,10 +45,10 @@ function checkDir() {
 
 ### Main function
 function run() {
-TEMPLATES_BASE=$(checkDir)
+BASE_DIR=${PWD}
 for i in "${templates[@]}"
 do
-    cd "${TEMPLATES_BASE}${i}";
+    cd "${TEMPLATES_BASE_DIR}${i}";
     echo -e "${GREEN}Downloading the latest changes from the ${WHITE}${i}${GREEN} repository${NC}"
     git checkout master && git pull
 
@@ -60,7 +60,7 @@ do
 
     echo -e "${GREEN}Publishing to NPM ${NC}"
     npm publish
-    cd ../
+    cd ${BASE_DIR}
 done;
 
 }
