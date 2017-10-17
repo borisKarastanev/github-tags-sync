@@ -15,15 +15,15 @@ NPM_VERSION_UPDATE="$2"
 
 ### declare an array of template names
 declare -a templates=(
-    "git@github.com:NativeScript/nativescript-page-templates.git"
-    "git@github.com:NativeScript/nativescript-page-templates-ts.git"
-    "git@github.com:NativeScript/nativescript-page-templates-ng.git"
+    "nativescript-page-templates"
+    "nativescript-page-templates-ts"
+    "nativescript-page-templates-ng"
 )
 
 ### Check PWD
 function checkDir() {
     if [[ -d ${PAGE_TEMPLATES_BASE_DIR} ]]; then
-        echo ${PWD};
+        echo ${PAGE_TEMPLATES_BASE_DIR};
     else
         echo -e "${RED}First argument must be a valid Directory${RED}${NC}";
         exit 1;
@@ -35,7 +35,7 @@ function run() {
 PAGE_TEMPLATES_BASE=$(checkDir)
 for i in "${templates[@]}"
 do
-    cd "${PAGE_TEMPLATES_BASE}/${i}";
+    cd "${PAGE_TEMPLATES_BASE}${i}";
     echo -e "${GREEN}Downloading the latest changes from the ${WHITE}${i}${GREEN} repository${NC}"
     git checkout master && git pull
 
@@ -47,6 +47,7 @@ do
 
     echo -e "${GREEN}Publishing to NPM ${NC}"
     npm publish
+    cd ../
 done;
 
 }

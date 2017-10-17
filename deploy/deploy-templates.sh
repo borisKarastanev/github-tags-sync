@@ -3,7 +3,7 @@
 set -e
 
 ### Global vars TODO Implement a method for more automated folder detection
-TMP_BASE_DIR="$1";
+TEMPLATES_BASE_DIR="$1";
 
 GREEN='\033[0;32m'
 WHITE='\033[1;37m'
@@ -35,8 +35,8 @@ declare -a templates=(
 
 ### Check PWD
 function checkDir() {
-    if [[ -d ${TMP_BASE_DIR} ]]; then
-        echo ${PWD};
+    if [[ -d ${TEMPLATES_BASE_DIR} ]]; then
+        echo ${TEMPLATES_BASE_DIR};
     else
         echo -e "${RED}First argument must be a valid Directory${RED}${NC}";
         exit 1;
@@ -45,10 +45,10 @@ function checkDir() {
 
 ### Main function
 function run() {
-TMP_BASE=$(checkDir)
+TEMPLATES_BASE=$(checkDir)
 for i in "${templates[@]}"
 do
-    cd "${TMP_BASE}/${i}";
+    cd "${TEMPLATES_BASE}${i}";
     echo -e "${GREEN}Downloading the latest changes from the ${WHITE}${i}${GREEN} repository${NC}"
     git checkout master && git pull
 
@@ -60,6 +60,7 @@ do
 
     echo -e "${GREEN}Publishing to NPM ${NC}"
     npm publish
+    cd ../
 done;
 
 }
