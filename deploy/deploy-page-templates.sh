@@ -3,7 +3,7 @@
 set -e
 
 ### Global vars TODO Implement a method for more automated folder detection
-TEMPLATES_BASE_DIR="$1";
+PAGE_TEMPLATES_BASE_DIR="$1";
 
 GREEN='\033[0;32m'
 WHITE='\033[1;37m'
@@ -15,28 +15,15 @@ NPM_VERSION_UPDATE="$2"
 
 ### declare an array of template names
 declare -a templates=(
-    "template-drawer-navigation"
-    "template-tab-navigation"
-    "template-master-detail"
-    "template-blank"
-    "template-drawer-navigation-ts"
-    "template-master-detail-ts"
-    "template-blank-ts"
-    "template-tab-navigation-ts"
-    "template-drawer-navigation-ng"
-    "template-tab-navigation-ng"
-    "template-master-detail-ng"
-    "template-blank-ng"
-    "template-master-detail-kinvey-ng"
-    "template-master-detail-kinvey-ts"
-    "template-master-detail-kinvey"
-
+    "nativescript-page-templates"
+    "nativescript-page-templates-ts"
+    "nativescript-page-templates-ng"
 )
 
 ### Check PWD
 function checkDir() {
-    if [[ -d ${TEMPLATES_BASE_DIR} ]]; then
-        echo ${TEMPLATES_BASE_DIR};
+    if [[ -d ${PAGE_TEMPLATES_BASE_DIR} ]]; then
+        echo ${PAGE_TEMPLATES_BASE_DIR};
     else
         echo -e "${RED}First argument must be a valid Directory${RED}${NC}";
         exit 1;
@@ -48,7 +35,7 @@ function run() {
 BASE_DIR=${PWD}
 for i in "${templates[@]}"
 do
-    cd "${TEMPLATES_BASE_DIR}${i}";
+    cd "${PAGE_TEMPLATES_BASE_DIR}${i}";
     echo -e "${GREEN}Downloading the latest changes from the ${WHITE}${i}${GREEN} repository${NC}"
     git checkout master && git pull
 
@@ -69,4 +56,3 @@ checkDir
 run
 echo -e "${GREEN}Done${NC}"
 exit 0;
-
