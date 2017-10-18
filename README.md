@@ -39,6 +39,36 @@ Automate npm deployment with github tags for listed Nativescript Sidekick Templa
  
  ```
 
+  ## deploy-page-templates
+Automate npm deployment with github tags for listed Nativescript Sidekick Page Templates 
+
+### Enter the scripts/deploy directory and copy the script to your fusion-templates directory
+
+ ```bash
+ $ cp ./deploy-page-templates.sh PATH_TO_YOUR_FOLDER/
+ 
+ ```
+ 
+ ### Running the script 
+ 
+ Make the file executable 
+
+
+ ```bash
+ $ chmod u+x ./deploy-page-templates.sh
+ 
+ ```
+ 
+ ### Run the script with valid arguments
+  
+ #### 1: Valid Sidekick templates directory
+ #### 2: Valid simver as an argument e.g [ 3.1.1 | major | minor | patch | ]
+
+```bash
+ $ ./deploy-page-templates.sh ./your-templates-dir 3.1.4
+ 
+ ```
+
 ## deploy-extension
 Automate npm deployment with github tags for the Nativescript Starter Kits Extension
 
@@ -90,3 +120,29 @@ Automate npm deployment with github tags for the Nativescript Starter Kits Exten
  $ ./get-templates.sh
  
  ```
+
+  ## get-page-templates
+### Enter the scripts/download directory and copy the script to your fusion-templates directory
+
+ ```bash
+ $ cp ./get-page-templates.sh /YOUR_DOWNLOAD_FOLDER
+ 
+ ```
+ 
+ ### Running the script 
+ 
+ Make the file executable 
+
+
+ ```bash
+ $ chmod u+x ./get-page-templates.sh
+ 
+ ```
+ 
+ ### Run the script 
+
+```bash
+ $ ./get-page-templates.sh
+ 
+ ```
+
