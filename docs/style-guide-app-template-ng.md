@@ -41,7 +41,7 @@ Replace what is in [work-folder]\app\package.json with the contents you saved as
 
 Now you can develop / deploy / debug your app template from [work-folder]\blank-ng, then you can commit changes to git from [work-folder]\template-blank-ng.  
 
-NOTE, however, that you have to be extra careful when commiting changes to git as you don't want to commit the local "dev" changes in [work-folder]\template-blank-ng\package.json (symlinked to [work-folder]\blank-ng\app\package.json) as this will break the `tns create` CLI command for your git-controlled template. 
+NOTE, however, that you have to be extra careful when committing changes to git as you don't want to commit the local "dev" changes in [work-folder]\template-blank-ng\package.json (symlinked to [work-folder]\blank-ng\app\package.json) as this will break the `tns create` CLI command for your git-controlled template. 
 Also, make sure not to commit changes to [work-folder]\template-blank-ng\App_Resources\Android\app.gradle (or any other App_Resources file modified in the symlinked copy when tns-running the app) either.
 Also, if you want to commit actual changes to the [work-folder]\template-blank-ng\package.json file (e.g. new dependencies to the git-controlled template) you will have to make them in two places -- modify [work-folder]\blank-ng\package.json (not symlinked!) to tns-run and test the changes locally and modify [work-folder]\template-blank-ng\package.json to commit them.
 
