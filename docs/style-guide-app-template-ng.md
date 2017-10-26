@@ -172,7 +172,7 @@ Consider using the [NativeScript core theme](https://github.com/NativeScript/the
 
 Consider using SASS for styling your app template.
 
-Consider using the following infrastructure to enable cross-platform SASS styling for your app template:
+Consider using the following infrastructure to enable cross-platform SASS styling for your app template:  
 **_app-variables.scss** file in the app template's root folder should import the NativeScript core theme variables and any custom colors or theme variable overrides you might use:
 ``` scss
 // Import the theme's variables. If you're using a color scheme 
