@@ -440,7 +440,7 @@ Do suffix a service class name with Service. For example, something that gets da
 *A few terms are unambiguously services. They typically indicate agency by ending in "-er". You may prefer to name a service that logs messages Logger rather than LoggerService. Decide if this exception is agreeable in your project. As always, strive for consistency.*
 
 ### Bootstrapping
-Do put bootstrapping and platform logic for the app in a file named main.ts.
+Do put bootstrapping and platform logic for the app in a file named **main.ts**.
 
 Avoid putting app logic in **main.ts**. Instead, consider placing it in a component or service.
 
