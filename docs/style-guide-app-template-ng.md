@@ -203,55 +203,52 @@ $primary: lighten(#000, 13%);
 ``` scss
 // Place any CSS rules you want to apply on both iOS and Android here. 
 // This is where the vast majority of your CSS code goes. 
-// Font icon class 
-.fa { 
-font-family: "FontAwesome"; 
-} 
-
-// Action bar 
-ActionBar .action-bar-title { 
-horizontal-align: center; 
-} 
+//Font icon
+.fa {
+   font-family: "FontAwesome";
+}
+//Action bar
+.action-item,
+NavigationButton {
+    color: $ab-color;
+}
 
 // ...
 ```
 
 **app.android.scss** file in the app template's root folder should import the app variables, the NativeScript core theme main ruleset, and the common styles; also place any styling rules to be applied only on Android here:
 ``` scss
-// Import app variables 
-@import 'app-variables'; 
+// Import app variables
+@import 'app-variables';
 
-// Import the theme's main ruleset - both index and platform specific. 
-@import '~nativescript-theme-core/scss/index'; 
-@import '~nativescript-theme-core/scss/platforms/index.android'; 
+// Import the theme’s main ruleset - both index and platform specific.
+@import '~nativescript-theme-core/scss/index';
+@import '~nativescript-theme-core/scss/platforms/index.android';
 
-// Import common styles 
-@import 'app-common'; 
+// Import common styles
+@import 'app-common';
 
-// Place any CSS rules you want to apply only on Android here 
-ActionBar .fa { 
-padding: 40px; 
-} 
+// Place any CSS rules you want to apply only on Android here
+.action-item {
+    padding-right: 10;
+}
 
 // ...
 ```
 
 **app.ios.scss** file in the app template's root folder should import the app variables, the NativeScript core theme main ruleset, and the common styles; also place any styling rules to be applied only on iOS here:
 ``` scss
-// Import app variables 
-@import 'app-variables'; 
+// Import app variables
+@import 'app-variables';
 
-// Import the theme's main ruleset - both index and platform specific. 
-@import '~nativescript-theme-core/scss/index'; 
-@import '~nativescript-theme-core/scss/platforms/index.ios'; 
+// Import the theme’s main ruleset - both index and platform specific.
+@import '~nativescript-theme-core/scss/index';
+@import '~nativescript-theme-core/scss/platforms/index.ios';
 
-// Import common styles 
-@import 'app-common'; 
+// Import common styles
+@import 'app-common';
 
-// Place any CSS rules you want to apply only on iOS here 
-ActionBar .fa { 
-padding: 40px 40px 40px 0; 
-} 
+// Place any CSS rules you want to apply only on iOS here
 
 // ...
 ```
@@ -259,17 +256,17 @@ padding: 40px 40px 40px 0;
 Consider using the following infrastructure to enable cross-platform SASS styling on component level:
 **_[component-name].component.scss** in the respective feature folder should contain the style rules to be applied both on iOS and Android for **[component-name].component.ts** (e.g. if styling **cars/car-list.component.ts**, the file should be **cars/_car-list.component.scss**):
 ``` scss
-// Start custom common variables 
-@import '../app-variables'; 
-// End custom common variables 
+// Start custom common variables
+@import '../app-variables';
+// End custom common variables
 
-// Custom styles 
-.list-group { 
-.list-group-item { 
-padding: 0 0 8 0; 
-background-color: $blue-10; 
-} 
-} 
+// Custom styles
+.list-group {
+    .list-group-item {
+        padding: 0 0 8 0;
+        background-color: $blue-10;
+    }
+}
 
 // ...
 ```
@@ -294,12 +291,12 @@ background-color: $blue-10;
 
 NOTE you should import the compiled **[component-name].component.css** file (NOT **[component-name].component.scss**) in your component e.g. if styling **cars/car-list.component.ts**, the file should be **cars/car-list.component.css**:
 ``` ts
-@Component({ 
-selector: "CarsList", 
-moduleId: module.id, 
-templateUrl: "./car-list.component.html", 
-styleUrls: ["./car-list.component.css"] 
-}) 
+@Component({
+    selector: "CarsList",
+    moduleId: module.id,
+    templateUrl: "./car-list.component.html",
+    styleUrls: ["./car-list.component.css"]
+})
 export class CarListComponent implements OnInit { 
 // ... 
 }
@@ -309,11 +306,11 @@ export class CarListComponent implements OnInit {
 ### Component selector names
 Do use a PascalCase element selector value (e.g. **CarDetail**)
 ``` ts
-@Component({ 
-selector: "CarDetail", 
-moduleId: module.id, 
-templateUrl: "./car-detail.component.html" 
-}) 
+@Component({
+    selector: "CarDetail",
+    moduleId: module.id,
+    templateUrl: "./car-detail.component.html"
+})
 export class CarDetailComponent implements OnInit { 
 // ... 
 }
