@@ -23,7 +23,7 @@ Avoid indicates something you should never do.
 ## Getting started
 Consider using the following workflow to facilitate app template development, testing, and debugging:  
 
-Clone the seed template git repo **(TBD!)** locally to [work-folder]\template-blank-ng:
+Clone the [seed template](https://github.com/NativeScript/template-blank-ng) git repo locally to [work-folder]\template-blank-ng:
 ```
 git clone git@github.com:NativeScript/template-blank-ng.git
 ```  
