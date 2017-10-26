@@ -1,4 +1,4 @@
-# Ng App Template Style Guide
+# Angular App Template Style Guide
 
 ## What is a NativeScript app template?
 The NativeScript app template is a blueprint for a fully functional mobile application developed with NativeScript. Each app template resides in its own git repo (e.g. https://github.com/NativeScript/template-master-detail-ng) and is usually published as an npm package as well (e.g. https://www.npmjs.com/package/tns-template-master-detail-ng). You use the tns create CLI command to create mobile app from app template like this:
