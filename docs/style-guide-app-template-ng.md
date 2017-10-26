@@ -37,7 +37,7 @@ Delete the whole [work-folder]\blank-ng\app folder.
 
 Using [Link Shell Extension](http://schinagl.priv.at/nt/hardlinkshellext/linkshellextension.html) (for Windows) create symbolic link to [work-folder]\template-blank-ng (the git-controlled folder created above) in [work-folder]\blank-ng and rename [work-folder]\blank-ng\template-blank-ng to [work-folder]\blank-ng\app.  
 
-Replace what is in [work-folder]\app\package.json with the contents you saved aside above (this effectively modifies [work-folder]\template-blank-ng\package.json as well so **make sure you do not commit this change to git** -- this is a local change that allows you to actually `tns run android` or `tns run ios` the app from the [work-folder]\blank-ng folder).
+Replace what is in [work-folder]\blank-ng\app\package.json with the contents you saved aside above (this effectively modifies [work-folder]\template-blank-ng\package.json as well so **make sure you do not commit this change to git** -- this is a local change that allows you to actually `tns run android` or `tns run ios` the app from the [work-folder]\blank-ng folder).
 
 Now you can develop / deploy / debug your app template from [work-folder]\blank-ng, then you can commit changes to git from [work-folder]\template-blank-ng.  
 
