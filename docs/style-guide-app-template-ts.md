@@ -253,7 +253,7 @@ Consider using the following infrastructure to enable cross-platform SASS stylin
 ## Services
 ### Delegate complex view model logic to services
 Consider limiting logic in a view model to only that required for the view. All other logic should be delegated to services.
-*Sample service implementation can be found [here](https://github.com/NativeScript/template-master-detail-ts/blob/master/cars/shared/car-service.ts); sample service usage from the view model can be found [here](https://github.com/NativeScript/template-master-detail-ts/blob/master/cars/cars-list-view-model.ts)*
+*Sample service implementation can be found [here](https://github.com/NativeScript/template-master-detail-ts/blob/master/cars/shared/car-service.ts); sample service usage from the view model can be found [here](https://github.com/NativeScript/template-master-detail-ts/blob/master/cars/cars-list-view-model.ts).*
 
 Consider moving reusable logic to services and keep pages and view models simple and focused on their intended purpose.
 
