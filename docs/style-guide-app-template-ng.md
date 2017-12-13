@@ -458,4 +458,4 @@ A few terms are unambiguously services. They typically indicate agency by ending
 
 * [Read TypeScript App Template Style Guide](https://github.com/NativeScript/nativescript-starter-kits-utils/blob/master/docs/style-guide-app-template-ts.md)
 
-* [Read Angular App Template Style Guide](https://github.com/NativeScript/nativescript-starter-kits-utils/blob/master/docs/style-guide-app-template-ng.md)
+* [Read JavaScript App Template Style Guide](https://github.com/NativeScript/nativescript-starter-kits-utils/blob/master/docs/style-guide-app-template.md)
