@@ -41,11 +41,12 @@ do
     echo -e "${GREEN}Creating a new npm version ${WHITE}${NPM_VERSION_UPDATE}${NC}"
     npm version ${NPM_VERSION_UPDATE}
 
+    echo -e "${GREEN}Publishing to NPM ${NC}"
+    npm publish
+
     echo -e "${GREEN}Pushing the newly created tag to ${WHITE}${i}${GREEN} repository${NC}"
     git push && git push --tags
 
-    echo -e "${GREEN}Publishing to NPM ${NC}"
-    npm publish
     cd ${BASE_DIR}
 done;
 
